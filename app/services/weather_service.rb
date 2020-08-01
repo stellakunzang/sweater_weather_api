@@ -8,7 +8,7 @@ class WeatherService
     req.params[:units] = "imperial"
     req.params[:appid] = ENV["OPEN_WEATHER_API_KEY"]
    end
-   json = JSON.parse(response.body, symbolize_names: true)
+   JSON.parse(response.body, symbolize_names: true)
   end
 
   def conn

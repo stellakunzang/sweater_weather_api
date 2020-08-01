@@ -5,7 +5,7 @@ class LocationService
       req.params[:key] = ENV["MAPQUEST_API_KEY"]
       req.params[:location] = destination
     end
-    json = JSON.parse(response.body, symbolize_names: true)
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   def conn
