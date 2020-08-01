@@ -17,6 +17,6 @@ class Forecast
   end
 
   def forecast
-    WeatherService.new.forecast(@latitude, @longitude)
+    WeatherService.new.get_forecast(@latitude, @longitude)
   end
 end

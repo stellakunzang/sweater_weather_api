@@ -7,7 +7,7 @@ class Destination
   end
 
   def destination
-    json ||= LocationService.new.location(@location)
+    json ||= LocationService.new.get_location(@location)
     json[:results][0][:locations][0][:latLng]
   end
 

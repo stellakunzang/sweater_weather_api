@@ -1,6 +1,6 @@
 class LocationService
 
-  def location(destination)
+  def get_location(destination)
     response = conn.get("geocoding/v1/address") do |req|
       req.params[:key] = ENV["MAPQUEST_API_KEY"]
       req.params[:location] = destination
