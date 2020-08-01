@@ -7,6 +7,6 @@ describe 'Background API' do
     json = JSON.parse(response.body, symbolize_names: true)
 
     expect(json[:data]).to be_a(Hash)
-    expect(json[:data][:attributes][:url]).to be_a(String)
+    expect(json[:data][:attributes][:image_url][0]).to be_a(String)
   end
 end
