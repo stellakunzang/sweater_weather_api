@@ -1,7 +1,7 @@
 class Api::V1::ForecastController < ApplicationController
   def index
-    destination = Destination.new(params[:location])
-    forecast = Forecast.new(destination.latitude, destination.longitude).forecast
-    
+    d = Destination.new(params[:location])
+    forecast = Forecast.new(d.location, d.latitude, d.longitude)
+    render json: ForecastSerializer.new(forecast)
   end
 end
