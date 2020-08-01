@@ -5,6 +5,7 @@ class WeatherService
     req.params[:lat] = lat
     req.params[:lon] = lon
     req.params[:exclude] = "minutely"
+    req.params[:units] = "imperial"
     req.params[:appid] = ENV["OPEN_WEATHER_API_KEY"]
    end
    json = JSON.parse(response.body, symbolize_names: true)
