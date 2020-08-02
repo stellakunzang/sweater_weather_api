@@ -7,7 +7,7 @@ describe 'Registration API' do
     json = JSON.parse(response.body, symbolize_names: true)
 
     expect(json[:data][:type]).to eq("users")
-    expect(json[:data][:id]).to eq("1")
+    expect(json[:data][:id]).to_not eq(nil)
     expect(json[:data][:attributes][:email]).to eq("whatever@example.com")
     expect(json[:data][:attributes][:api_key]).to_not eq(nil)
   end
