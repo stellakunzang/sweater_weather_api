@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Background API' do
-  it 'returns appropriate background given location' do
+  it 'returns appropriate background given location', :vcr do
     get '/api/v1/backgrounds?location=denver,co'
 
     json = JSON.parse(response.body, symbolize_names: true)

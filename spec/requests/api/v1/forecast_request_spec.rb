@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Forecast API' do
-  it 'returns detailed forecast information when given a city and state' do
+  it 'returns detailed forecast information when given a city and state', :vcr do
     get '/api/v1/forecast?location=denver,co'
 
     json = JSON.parse(response.body, symbolize_names: true)
