@@ -2,118 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://www.mapquestapi.com/geocoding/v1/address?key=<MAPQUEST_API_KEY>&location=denver,co
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.0.1
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 02 Aug 2020 03:53:11 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '1733'
-      Access-Control-Allow-Methods:
-      - OPTIONS,GET,POST
-      Access-Control-Allow-Origin:
-      - "*"
-      Cache-Control:
-      - no-cache, must-revalidate
-      Expires:
-      - Mon, 20 Dec 1998 01:00:00 GMT
-      Geocodetransactioncount:
-      - '1'
-      Last-Modified:
-      - Sun, 02 Aug 2020 03:53:11 GMT
-      Pragma:
-      - no-cache
-      Reversegeocodetransactioncount:
-      - '0'
-      Server:
-      - Apache-Coyote/1.1
-      Set-Cookie:
-      - JSESSIONID=BC13C6AE2AD31F8109AD5ABBAB46AA89; Path=/; HttpOnly
-      Status:
-      - success
-      Transactionweight:
-      - '1.0'
-    body:
-      encoding: UTF-8
-      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2020 MapQuest,
-        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
-        2020 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"denver,co"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"Denver
-        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<MAPQUEST_API_KEY>&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-1&scalebar=true&zoom=12&rand=1542361161"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
-        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<MAPQUEST_API_KEY>&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-2&scalebar=true&zoom=9&rand=581293493"}]}]}'
-  recorded_at: Sun, 02 Aug 2020 03:53:11 GMT
-- request:
-    method: get
-    uri: http://www.mapquestapi.com/geocoding/v1/address?key=<MAPQUEST_API_KEY>&location=denver,co
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.0.1
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 02 Aug 2020 03:53:11 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '1734'
-      Access-Control-Allow-Methods:
-      - OPTIONS,GET,POST
-      Access-Control-Allow-Origin:
-      - "*"
-      Cache-Control:
-      - no-cache, must-revalidate
-      Expires:
-      - Mon, 20 Dec 1998 01:00:00 GMT
-      Geocodetransactioncount:
-      - '1'
-      Last-Modified:
-      - Sun, 02 Aug 2020 03:53:11 GMT
-      Pragma:
-      - no-cache
-      Reversegeocodetransactioncount:
-      - '0'
-      Server:
-      - Apache-Coyote/1.1
-      Set-Cookie:
-      - JSESSIONID=C7768BE0601920B55527DBC7FDDD2303; Path=/; HttpOnly
-      Status:
-      - success
-      Transactionweight:
-      - '1.0'
-    body:
-      encoding: UTF-8
-      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2020 MapQuest,
-        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
-        2020 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"denver,co"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"Denver
-        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<MAPQUEST_API_KEY>&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-644614477"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
-        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<MAPQUEST_API_KEY>&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-2&scalebar=true&zoom=9&rand=-618041415"}]}]}'
-  recorded_at: Sun, 02 Aug 2020 03:53:11 GMT
-- request:
-    method: get
     uri: http://api.openweathermap.org/data/2.5/onecall?appid=<OPEN_WEATHER_API_KEY>&exclude=minutely&lat=39.738453&lon=-104.984853&units=imperial
     body:
       encoding: US-ASCII
@@ -133,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Sun, 02 Aug 2020 03:53:11 GMT
+      - Sun, 02 Aug 2020 04:01:12 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -208,7 +96,7 @@ http_interactions:
         rain","icon":"10d"}],"clouds":0,"pop":0.2,"rain":0.11,"uvi":10.1},{"dt":1596826800,"sunrise":1596801903,"sunset":1596852374,"temp":{"day":93.52,"min":74.57,"max":96.8,"night":78.73,"eve":93.22,"morn":74.57},"feels_like":{"day":85.73,"night":72.93,"eve":87.26,"morn":67.73},"pressure":1010,"humidity":10,"dew_point":23.81,"wind_speed":6.69,"wind_deg":310,"weather":[{"id":500,"main":"Rain","description":"light
         rain","icon":"10d"}],"clouds":0,"pop":0.36,"rain":0.52,"uvi":9.99},{"dt":1596913200,"sunrise":1596888360,"sunset":1596938703,"temp":{"day":92.7,"min":73.96,"max":95.22,"night":79.07,"eve":91.02,"morn":73.96},"feels_like":{"day":85.8,"night":71.87,"eve":80.89,"morn":67.62},"pressure":1013,"humidity":10,"dew_point":25.66,"wind_speed":4.97,"wind_deg":356,"weather":[{"id":500,"main":"Rain","description":"light
         rain","icon":"10d"}],"clouds":9,"pop":0.33,"rain":0.13,"uvi":10.12}]}'
-  recorded_at: Sun, 02 Aug 2020 03:53:11 GMT
+  recorded_at: Sun, 02 Aug 2020 04:01:12 GMT
 - request:
     method: get
     uri: http://api.openweathermap.org/data/2.5/onecall?appid=<OPEN_WEATHER_API_KEY>&exclude=minutely&lat=39.738453&lon=-104.984853&units=imperial
@@ -230,7 +118,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Sun, 02 Aug 2020 03:53:11 GMT
+      - Sun, 02 Aug 2020 04:01:12 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -305,7 +193,7 @@ http_interactions:
         rain","icon":"10d"}],"clouds":0,"pop":0.2,"rain":0.11,"uvi":10.1},{"dt":1596826800,"sunrise":1596801903,"sunset":1596852374,"temp":{"day":93.52,"min":74.57,"max":96.8,"night":78.73,"eve":93.22,"morn":74.57},"feels_like":{"day":85.73,"night":72.93,"eve":87.26,"morn":67.73},"pressure":1010,"humidity":10,"dew_point":23.81,"wind_speed":6.69,"wind_deg":310,"weather":[{"id":500,"main":"Rain","description":"light
         rain","icon":"10d"}],"clouds":0,"pop":0.36,"rain":0.52,"uvi":9.99},{"dt":1596913200,"sunrise":1596888360,"sunset":1596938703,"temp":{"day":92.7,"min":73.96,"max":95.22,"night":79.07,"eve":91.02,"morn":73.96},"feels_like":{"day":85.8,"night":71.87,"eve":80.89,"morn":67.62},"pressure":1013,"humidity":10,"dew_point":25.66,"wind_speed":4.97,"wind_deg":356,"weather":[{"id":500,"main":"Rain","description":"light
         rain","icon":"10d"}],"clouds":9,"pop":0.33,"rain":0.13,"uvi":10.12}]}'
-  recorded_at: Sun, 02 Aug 2020 03:53:12 GMT
+  recorded_at: Sun, 02 Aug 2020 04:01:13 GMT
 - request:
     method: get
     uri: http://api.openweathermap.org/data/2.5/onecall?appid=<OPEN_WEATHER_API_KEY>&exclude=minutely&lat=39.738453&lon=-104.984853&units=imperial
@@ -327,7 +215,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Sun, 02 Aug 2020 03:53:12 GMT
+      - Sun, 02 Aug 2020 04:01:13 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -402,5 +290,5 @@ http_interactions:
         rain","icon":"10d"}],"clouds":0,"pop":0.2,"rain":0.11,"uvi":10.1},{"dt":1596826800,"sunrise":1596801903,"sunset":1596852374,"temp":{"day":93.52,"min":74.57,"max":96.8,"night":78.73,"eve":93.22,"morn":74.57},"feels_like":{"day":85.73,"night":72.93,"eve":87.26,"morn":67.73},"pressure":1010,"humidity":10,"dew_point":23.81,"wind_speed":6.69,"wind_deg":310,"weather":[{"id":500,"main":"Rain","description":"light
         rain","icon":"10d"}],"clouds":0,"pop":0.36,"rain":0.52,"uvi":9.99},{"dt":1596913200,"sunrise":1596888360,"sunset":1596938703,"temp":{"day":92.7,"min":73.96,"max":95.22,"night":79.07,"eve":91.02,"morn":73.96},"feels_like":{"day":85.8,"night":71.87,"eve":80.89,"morn":67.62},"pressure":1013,"humidity":10,"dew_point":25.66,"wind_speed":4.97,"wind_deg":356,"weather":[{"id":500,"main":"Rain","description":"light
         rain","icon":"10d"}],"clouds":9,"pop":0.33,"rain":0.13,"uvi":10.12}]}'
-  recorded_at: Sun, 02 Aug 2020 03:53:12 GMT
+  recorded_at: Sun, 02 Aug 2020 04:01:13 GMT
 recorded_with: VCR 6.0.0
