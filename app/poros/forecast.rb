@@ -1,5 +1,4 @@
 class Forecast
-
   attr_reader :location,
               :current,
               :hourly,
