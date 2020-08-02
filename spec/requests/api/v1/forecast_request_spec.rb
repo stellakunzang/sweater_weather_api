@@ -7,6 +7,7 @@ describe 'Forecast API' do
     json = JSON.parse(response.body, symbolize_names: true)
 
     expect(json[:data]).to be_a(Hash)
+    expect(json[:data][:id]).to eq(nil)
     expect(json[:data][:attributes][:current][:weather]).to be_a(Array)
     expect(json[:data][:attributes][:hourly]).to be_a(Array)
     expect(json[:data][:attributes][:daily]).to be_a(Array)
