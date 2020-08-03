@@ -4,13 +4,17 @@ class Trail
               :trails,
               :fake_id
 
-  def initialize(location, latitude, longitude)
-    @location = location
-    @latitude = latitude
-    @longitude = longitude
+  def initialize(destination)
+    @location = destination
+    @latitude = destination_coordinates.latitude
+    @longitude = destination_coordinates.longitude
     @forecast =  forecast
     @trails = nearby_trails
     @fake_id = nil
+  end
+
+  def destination_coordinates
+    Destination.new(@location)
   end
 
   def forecast
@@ -18,7 +22,7 @@ class Trail
     current = WeatherService.new.get_forecast(@latitude, @longitude)
     forecast[:summary] = current[:current][:weather][0][:description]
     forecast[:temperature] = current[:current][:temp]
-    forecast 
+    forecast
   end
 
   def nearby_trails

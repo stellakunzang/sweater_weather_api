@@ -2,12 +2,12 @@ require 'rails_helper'
 
 describe Trail, :vcr do
   it "exists" do
-    trail = Trail.new("denver,co", 39.738453, -104.984853)
+    trail = Trail.new("denver,co")
     expect(trail).to be_a(Trail)
   end
 
   it "attributes" do
-    trail = Trail.new("denver,co", 39.738453, -104.984853)
+    trail = Trail.new("denver,co")
     expect(trail.location).to eq("denver,co")
     expect(trail.fake_id).to eq(nil)
 
