@@ -1,6 +1,6 @@
 module Coordinatable
 
-  def destination_coordinates
+  def coordinates
     Destination.new(@location)
   end
 

@@ -8,8 +8,8 @@ class Trail
 
   def initialize(destination)
     @location = destination
-    @latitude = destination_coordinates.latitude
-    @longitude = destination_coordinates.longitude
+    @latitude = coordinates.latitude
+    @longitude = coordinates.longitude
     @forecast =  forecast
     @trails = nearby_trails
     @fake_id = nil

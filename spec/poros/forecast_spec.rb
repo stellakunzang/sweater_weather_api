@@ -9,7 +9,7 @@ describe Forecast, :vcr do
   it "attributes" do
     forecast = Forecast.new("denver,co")
     expect(forecast.location).to eq("denver,co")
-    expect(forecast.destination_coordinates).to be_a(Destination)
+    expect(forecast.coordinates).to be_a(Destination)
     expect(forecast.current).to be_a(Hash)
     expect(forecast.hourly).to be_a(Array)
     expect(forecast.daily).to be_a(Array)
