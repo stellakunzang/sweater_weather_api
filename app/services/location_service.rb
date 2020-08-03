@@ -14,7 +14,7 @@ class LocationService
       req.params[:from] = origin
       req.params[:to] = destination
     end
-    json = JSON.parse(response.body, symbolize_names: true)
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   def conn
