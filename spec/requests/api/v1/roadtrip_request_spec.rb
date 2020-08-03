@@ -13,11 +13,11 @@ describe 'Roadtrip API' do
 
     expect(json[:data]).to be_a(Hash)
     expect(json[:data][:id]).to_not eq(nil)
-    expect(json[:data][:attributes][:origin]).to be_a(Array)
-    expect(json[:data][:attributes][:destination]).to be_a(Array)
-    expect(json[:data][:attributes][:duration]).to be_a(Array)
-    expect(json[:data][:attributes][:forecast].length).to eq(2)
-    expect(json[:data][:attributes][:forecast][:temperature]).to be_a(Array)
-    expect(json[:data][:attributes][:forecast][:description]).to be_a(Array)
+    expect(json[:data][:type]).to eq("road_trip")
+    expect(json[:data][:attributes][:origin]).to eq("denver,co")
+    expect(json[:data][:attributes][:destination]).to eq("pueblo,co")
+    expect(json[:data][:attributes][:duration]).to eq("6237")
+    expect(json[:data][:attributes][:temperature]).to be_a(Float)
+    expect(json[:data][:attributes][:description]).to be_a(String)
   end
 end
