@@ -19,7 +19,17 @@ class Trail
   end
 
   def nearby_trails
-    trails = TrailService.new.get_trails(@latitude, @longitude)
-    binding.pry
+    trails = []
+    trail_data = TrailService.new.get_trails(@latitude, @longitude)
+    trail_data[:trails].each do |trail|
+      trail = Hash.new { |hash, key| hash[key] = {name: nil, summary: nil, difficulty: nil, location: nil, distance_to_trail: nil} }
+      trail[:name] = [:name]
+      trail[:summary] = [:summary]
+      trail[:difficulty] = [:difficulty]
+      trail[:location] = [:location]
+      trail[:distance_to_trail] = LocationService.new.distance_to_trail(@latitude, @longitude, [:latitude], [:longitude])
+      trails << trail
+    end
+    trails
   end
 end
