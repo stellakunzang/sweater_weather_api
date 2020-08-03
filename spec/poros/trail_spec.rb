@@ -15,8 +15,8 @@ describe Trail, :vcr do
     expect(trail.forecast[:summary]).to be_a(String)
     expect(trail.forecast[:temperature]).to be_a(Float)
 
-    expect(trail.trails).to be_a(Hash)
-    trails.trails.each do |trail|
+    expect(trail.trails).to be_a(Array)
+    trail.trails.each do |trail|
       expect(trail[:name]).to_not eq(nil)
       expect(trail[:name]).to be_a(String)
 
