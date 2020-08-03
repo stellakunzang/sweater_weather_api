@@ -4,8 +4,6 @@ describe RoadTrip, type: :model do
   describe "validations" do
     it { should validate_presence_of :origin }
     it { should validate_presence_of :destination}
-    it { should validate_presence_of :duration}
-    it { should validate_presence_of :forecast}
   end
 
   describe "relationships" do
@@ -13,11 +11,19 @@ describe RoadTrip, type: :model do
   end
 
   describe "instance methods" do
-    it '#temperature' do
+    it '#calculate_duration' do
 
     end
 
-    it '#description' do
+    it '#calculate_forecast' do
+
+    end
+
+    it '#temp_description' do
+
+    end
+
+    it '#find_dt' do
 
     end
   end
