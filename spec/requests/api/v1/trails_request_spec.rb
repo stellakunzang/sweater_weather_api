@@ -20,7 +20,7 @@ describe 'Trails API' do
     expect(json[:data][:attributes][:trails][0][:difficulty]).to_not eq(nil)
     expect(json[:data][:attributes][:trails][0][:location]).to be_a(String)
     expect(json[:data][:attributes][:trails][0][:location]).to_not eq(nil)
-    expect(json[:data][:attributes][:trails][0][:distance_to_trail]).to be_a(String)
+    expect(json[:data][:attributes][:trails][0][:distance_to_trail]).to be_a(Float)
     expect(json[:data][:attributes][:trails][0][:distance_to_trail]).to_not eq(nil)
   end
 end
