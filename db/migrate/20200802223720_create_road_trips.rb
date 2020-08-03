@@ -5,7 +5,8 @@ class CreateRoadTrips < ActiveRecord::Migration[5.2]
       t.string :origin
       t.string :destination
       t.string :duration
-      t.string :forecast
+      t.float :temperature
+      t.string :description
 
       t.timestamps
     end

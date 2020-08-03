@@ -20,7 +20,8 @@ ActiveRecord::Schema.define(version: 2020_08_02_223720) do
     t.string "origin"
     t.string "destination"
     t.string "duration"
-    t.string "forecast"
+    t.float "temperature"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_road_trips_on_user_id"
