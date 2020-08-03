@@ -1,4 +1,6 @@
 class Trail
+  include Coordinatable
+
   attr_reader :location,
               :forecast,
               :trails,
@@ -11,10 +13,6 @@ class Trail
     @forecast =  forecast
     @trails = nearby_trails
     @fake_id = nil
-  end
-
-  def destination_coordinates
-    Destination.new(@location)
   end
 
   def forecast

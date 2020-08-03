@@ -1,14 +1,16 @@
 class Forecast
+  include Coordinatable
+  
   attr_reader :location,
               :current,
               :hourly,
               :daily,
               :fake_id
 
-  def initialize(destination, latitude, longitude)
+  def initialize(destination)
     @location = destination
-    @latitude = latitude
-    @longitude = longitude
+    @latitude = destination_coordinates.latitude
+    @longitude = destination_coordinates.longitude
     @current = forecast[:current]
     @hourly = forecast[:hourly]
     @daily = forecast[:daily]

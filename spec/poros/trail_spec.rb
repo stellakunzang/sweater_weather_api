@@ -9,6 +9,7 @@ describe Trail, :vcr do
   it "attributes" do
     trail = Trail.new("denver,co")
     expect(trail.location).to eq("denver,co")
+    expect(trail.destination_coordinates).to be_a(Destination)
     expect(trail.fake_id).to eq(nil)
 
     expect(trail.forecast).to be_a(Hash)
