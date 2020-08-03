@@ -12,7 +12,7 @@ class RoadTrip < ApplicationRecord
 
   def calculate_forecast(duration)
     d = Destination.new(self.destination)
-    forecast = WeatherService.new.trip_forecast(d.latitude, d.longitude)
+    forecast = WeatherService.new.get_forecast(d.latitude, d.longitude)
     temp_description(forecast, duration)
   end
 
