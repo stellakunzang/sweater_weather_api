@@ -1,5 +1,3 @@
-require "time"
-
 class WeatherService
 
   def get_forecast(lat, lon)
