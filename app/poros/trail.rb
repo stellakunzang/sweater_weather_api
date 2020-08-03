@@ -14,22 +14,30 @@ class Trail
   end
 
   def forecast
+    forecast = Hash.new
     current = WeatherService.new.get_forecast(@latitude, @longitude)
-    { summary: current[:current][:weather][0][:description], temperature: current[:current][:temp] }
+    forecast[:summary] = current[:current][:weather][0][:description]
+    forecast[:temperature] = current[:current][:temp]
+    forecast 
   end
 
   def nearby_trails
     trails = []
     trail_data = TrailService.new.get_trails(@latitude, @longitude)
     trail_data[:trails].each do |trail|
-      trail = Hash.new { |hash, key| hash[key] = {name: nil, summary: nil, difficulty: nil, location: nil, distance_to_trail: nil} }
-      trail[:name] = [:name]
-      trail[:summary] = [:summary]
-      trail[:difficulty] = [:difficulty]
-      trail[:location] = [:location]
-      trail[:distance_to_trail] = LocationService.new.distance_to_trail(@latitude, @longitude, [:latitude], [:longitude])
-      trails << trail
+      trail_hash = Hash.new
+      trail_hash[:name] = trail[:name]
+      trail_hash[:summary] = trail[:summary]
+      trail_hash[:difficulty] = trail[:difficulty]
+      trail_hash[:location] = trail[:location]
+      trail_hash[:distance_to_trail] = new_trip(trail[:location])
+      trails << trail_hash
     end
     trails
+  end
+
+  def new_trip(destination)
+    route = LocationService.new.road_trip(@location, destination)
+    route[:route][:distance]
   end
 end
