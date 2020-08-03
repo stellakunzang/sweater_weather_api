@@ -19,6 +19,7 @@ class Trail
   end
 
   def nearby_trails
-
+    trails = TrailService.new.get_trails(@latitude, @longitude)
+    binding.pry
   end
 end
