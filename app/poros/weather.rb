@@ -18,18 +18,18 @@ class Weather
   end
 
   def format_date(unix_utc)
-    Time.at(offset_date_time(unix_utc)).strftime("%B %-d")
+    Time.at(unix_utc).strftime("%B %-d")
   end
 
   def format_time(unix_utc)
-    Time.at(offset_date_time(unix_utc)).strftime("%I:%M %p")
+    Time.at(unix_utc).strftime("%l:%M %p")
   end
 
   def day_of_the_week(unix_utc)
-    Time.at(offset_date_time(unix_utc)).strftime("%A")
+    Time.at(unix_utc).strftime("%A")
   end
 
-  def offset_date_time(unix_utc)
-    unix_utc - forecast[:timezone_offset]
+  def find_hour(unix_utc)
+    Time.at(unix_utc).strftime("%I %p")
   end
 end
