@@ -1,4 +1,7 @@
+require './lib/assets/coordinatable'
+
 class Forecast
+  
   include Coordinatable
 
   attr_reader :location,
