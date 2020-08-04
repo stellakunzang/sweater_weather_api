@@ -20,4 +20,14 @@ describe 'Roadtrip API' do
     expect(json[:data][:attributes][:temperature]).to be_a(Float)
     expect(json[:data][:attributes][:description]).to be_a(String)
   end
+
+  it 'returns error without authorized user', :vcr do
+    post "/api/v1/road_trip?origin=denver,co&destination=pueblo,co&api_key=#api_key"
+
+    json = JSON.parse(response.body, symbolize_names: true)
+
+    expect(json[:status]).to eq("error")
+    expect(json[:code]).to eq(401)
+    expect(json[:message]).to eq("Unauthorized")
+  end
 end
