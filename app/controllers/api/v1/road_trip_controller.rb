@@ -1,11 +1,11 @@
 class Api::V1::RoadTripController < ApplicationController
   def create
-    user = User.where(api_key: params[:api_key]).first
+    user = User.find_by(api_key: params[:api_key])
     if user
-      roadtrip = user.road_trips.new(road_trip_params)
-      if roadtrip.save
-        render json: RoadTripSerializer.new(roadtrip)
-      end
+      roadtrip = user.road_trips.create(road_trip_params)
+      render json: RoadTripSerializer.new(roadtrip)
+    else
+      render json: Error.new.unauthorized
     end
   end
 
