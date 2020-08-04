@@ -1,8 +1,12 @@
+require './lib/assets/coordinatable'
+
 class RoadTrip < ApplicationRecord
   before_create :calculate_duration
   belongs_to :user
   validates_presence_of :origin
   validates_presence_of :destination
+
+  include Coordinatable
 
   def calculate_duration
     road_trip = LocationService.new.road_trip(self.origin, self.destination)
@@ -11,8 +15,9 @@ class RoadTrip < ApplicationRecord
   end
 
   def calculate_forecast(duration)
-    d = Destination.new(self.destination)
-    forecast = WeatherService.new.trip_forecast(d.latitude, d.longitude)
+    @location = self.destination
+    weather = WeatherService.new
+    forecast = weather.get_forecast(coordinates.latitude, coordinates.longitude)
     temp_description(forecast, duration)
   end
 

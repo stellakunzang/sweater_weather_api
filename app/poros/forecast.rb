@@ -5,17 +5,11 @@ class Forecast
               :daily,
               :fake_id
 
-  def initialize(destination, latitude, longitude)
-    @location = destination
-    @latitude = latitude
-    @longitude = longitude
-    @current = forecast[:current]
-    @hourly = forecast[:hourly]
-    @daily = forecast[:daily]
+  def initialize(destination)
     @fake_id = nil
-  end
-
-  def forecast
-    WeatherService.new.get_forecast(@latitude, @longitude)
+    @location = destination
+    @current = CurrentWeather.new(destination).current
+    @hourly = HourlyForecast.new(destination).hourly
+    @daily = DailyForecast.new(destination).daily
   end
 end
