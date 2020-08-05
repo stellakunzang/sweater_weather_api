@@ -91,7 +91,7 @@ ___
 
 `POST '/api/v1/sessions?email=<email>&password=<password>'`
 
-example response for this request: `'/api/v1/sessions?email=email@example.com&password=thepassword'`
+example response for this request: `'/api/v1/sessions?email=whatever@example.com&password=password'`
 
       `{:status=>200,
        :body=>
