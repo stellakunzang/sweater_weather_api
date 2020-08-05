@@ -17,19 +17,19 @@ class Weather
     WeatherService.new.get_forecast(@latitude, @longitude)
   end
 
-  def format_date(unix_utc)
-    Time.at(unix_utc).strftime("%B %-d")
+  def format_date(seconds)
+    Time.at(seconds).strftime("%B %-d")
   end
 
-  def format_time(unix_utc)
-    Time.at(unix_utc).strftime("%l:%M %p")
+  def format_time(seconds)
+    Time.at(seconds).strftime("%l:%M %p")
   end
 
-  def day_of_the_week(unix_utc)
-    Time.at(unix_utc).strftime("%A")
+  def day_of_the_week(seconds)
+    Time.at(seconds).strftime("%A")
   end
 
-  def find_hour(unix_utc)
-    Time.at(unix_utc).strftime("%I %p")
+  def find_hour(seconds)
+    Time.at(seconds).strftime("%I %p")
   end
 end
