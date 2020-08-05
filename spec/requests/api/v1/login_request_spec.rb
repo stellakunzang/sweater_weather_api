@@ -15,7 +15,7 @@ describe 'Login API' do
     expect(json[:body][:data][:attributes][:api_key]).to_not eq(nil)
   end
 
-  it 'can login a registered user', :vcr do
+  it 'cannot login an unregistered user', :vcr do
     post '/api/v1/users?email=whatever@example.com&password=password&password_confirmation=password'
 
     post '/api/v1/sessions?email=whatever@example.com&password=passwordz'
