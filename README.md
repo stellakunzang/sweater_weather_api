@@ -6,7 +6,7 @@ This is the final project of Mod 3 (of 4) at Turing School of Software and Desig
 
 `GET '/api/v1/backgrounds?location=<city>,<state>'`
 
-example response for this response: `GET '/api/v1/backgrounds?location=denver,co'`
+example response for this request: `GET '/api/v1/backgrounds?location=denver,co'`
 
     `{:data=>
       {:id=>nil,
@@ -17,7 +17,7 @@ example response for this response: `GET '/api/v1/backgrounds?location=denver,co
 
 `GET '/api/v1/forecast?location=<city>,<state>'`
 
-example response for this response: `GET '/api/v1/forecast?location=denver,co'`
+example response for this request: `GET '/api/v1/forecast?location=denver,co'`
 
       `{:data=>
         {:id=>nil,
@@ -79,7 +79,7 @@ ___
 
 `POST '/api/v1/users?email=<email>&password=<password>&password_confirmation=<password confirmation>'`
 
-example response for this response: `POST '/api/v1/users?email=whatever@example.com&password=password&password_confirmation=password'`
+example response for this request: `POST '/api/v1/users?email=whatever@example.com&password=password&password_confirmation=password'`
 
       `{:data=>
         {:id=>"524",
@@ -91,7 +91,7 @@ ___
 
 `POST '/api/v1/sessions?email=<email>&password=<password>'`
 
-example response for this response: `'/api/v1/sessions?email=email@example.com&password=thepassword'`
+example response for this request: `'/api/v1/sessions?email=email@example.com&password=thepassword'`
 
       `{:status=>200,
        :body=>
@@ -106,7 +106,7 @@ ___
 
 `POST '/api/v1/road_trip?origin=<city>,<state>&destination=<city>,<state>&api_key=<api_key>'`
 
-example response for this response: `POST '/api/v1/road_trip?origin=denver,co&destination=pueblo,co&api_key=<api_key>'`
+example response for this request: `POST '/api/v1/road_trip?origin=denver,co&destination=pueblo,co&api_key=<api_key>'`
 
     `{:data=>
       {:id=>"94",
